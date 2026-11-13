@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agentic Governance Workflow · Scalable Governance</title>
+<meta name="description" content="How to make governance scale: Governance-Driven Development and the Agentic Governance Workflow.">
+<link rel="canonical" href="https://scalable-governance.org/agentic-governance-workflow/">
+<meta property="og:url" content="https://scalable-governance.org/agentic-governance-workflow/">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>document.documentElement.classList.add('js');</script>
+<script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Actor icons, reused in the legend and on the step cards. -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="icon-governance-agent" viewBox="0 0 124 130"><g style="fill:var(--blue)" transform="rotate(-5 62 68)"><path style="stroke:var(--blue)" d="M48 20 L58 9" stroke-width="6" stroke-linecap="round"/><circle cx="60" cy="7.5" r="7"/><rect x="14" y="18" width="80" height="50" rx="22"/><rect x="26" y="33" width="56" height="22" rx="11" fill="#fff"/><circle cx="43" cy="44" r="5.4"/><circle cx="65" cy="44" r="5.4"/><rect x="6" y="80" width="10" height="26" rx="5"/><rect x="92" y="80" width="10" height="26" rx="5"/><rect x="20" y="72" width="68" height="50" rx="18"/><path d="M54 80 L67.5 85.4 V97.2 C67.5 105.6 61.5 110.5 54 113 C46.5 110.5 40.5 105.6 40.5 97.2 V85.4 Z" fill="#fff"/></g></symbol>
+  <symbol id="icon-coding-agent" viewBox="0 0 124 130"><g style="fill:var(--violet)" transform="rotate(4 62 68)"><path style="stroke:var(--violet)" d="M54 20 V9" stroke-width="6" stroke-linecap="round"/><circle cx="54" cy="7" r="7"/><rect x="14" y="18" width="80" height="50" rx="22"/><rect x="26" y="33" width="56" height="22" rx="11" fill="#fff"/><rect x="36" y="39" width="14" height="10" rx="3.4"/><rect x="58" y="39" width="14" height="10" rx="3.4"/><rect x="6" y="80" width="10" height="26" rx="5"/><rect x="92" y="80" width="10" height="26" rx="5"/><rect x="20" y="72" width="68" height="50" rx="18"/><g fill="none" stroke="#fff" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"><path d="M42 82 L32 95 L42 108"/><path d="M70 82 L80 95 L70 108"/><path d="M63 79 L49 111"/></g></g></symbol>
+  <symbol id="icon-human" viewBox="0 0 124 130"><g style="fill:var(--ink)"><circle cx="62" cy="36" r="26"/><path d="M16 122 V96 C16 78.5 32 66 62 66 C92 66 108 78.5 108 96 V122 Z"/></g></symbol>
+  <symbol id="icon-human-spec" viewBox="0 0 124 130"><g style="fill:var(--ink)"><circle cx="62" cy="36" r="26"/><path d="M16 122 V96 C16 78.5 32 66 62 66 C92 66 108 78.5 108 96 V122 Z"/></g><path d="M62 78 L75.5 83.4 V95.2 C75.5 103.6 69.5 108.5 62 111 C54.5 108.5 48.5 103.6 48.5 95.2 V83.4 Z" fill="#fff"/></symbol>
+  <symbol id="icon-human-code" viewBox="0 0 124 130"><g style="fill:var(--ink)"><circle cx="62" cy="36" r="26"/><path d="M16 122 V96 C16 78.5 32 66 62 66 C92 66 108 78.5 108 96 V122 Z"/></g><g fill="none" stroke="#fff" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"><path d="M48 80 L38 94 L48 108"/><path d="M76 80 L86 94 L76 108"/><path d="M68 77 L56 111"/></g></symbol>
+  <symbol id="icon-paragraph" viewBox="0 0 24 24"><text x="12" y="17.5" text-anchor="middle" font-family="Literata, Georgia, serif" font-weight="600" font-size="19" fill="#fff">§</text></symbol>
+  <symbol id="icon-document" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2" fill="#fff"/><g style="fill:var(--blue)"><rect x="8" y="7" width="8" height="1.8"/><rect x="8" y="10.5" width="8" height="1.8"/><rect x="8" y="14" width="5" height="1.8"/></g></symbol>
+  <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 3 L20 7 V13 C20 18 16.5 21 12 22.5 C7.5 21 4 18 4 13 V7 Z" fill="#fff"/><path style="stroke:var(--blue)" d="M9.5 12.5 L11.5 14.5 L15 10.5" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5" fill="none" stroke="#fff" stroke-width="2.4"/><path d="M14.5 14.5 L20 20" stroke="#fff" stroke-width="3" stroke-linecap="round"/></symbol>
+  <symbol id="icon-chevron-down" viewBox="0 0 20 20"><path style="stroke:var(--blue)" d="M4 6 L10 14 L16 6" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="icon-chevron-right" viewBox="0 0 20 20"><path style="stroke:var(--blue)" d="M6 4 L14 10 L6 16" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="site-nav" id="site-nav">
+  <div class="site-nav__inner">
+    <div class="site-nav__bar">
+      <a class="brand" href="../" aria-label="Scalable Governance, home">
+        <svg class="brand__logo" viewBox="0 10 200 200" aria-hidden="true"><circle cx="100" cy="110" r="85" stroke-width="14"/><circle cx="100" cy="138.76" r="52.53" stroke-width="12"/><circle cx="100" cy="155.12" r="32.47" stroke-width="11"/></svg>
+        <span class="brand__text">
+          <span class="brand__name">Scalable Governance</span>
+          <span class="brand__tagline">Applied research on AI governance</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <nav aria-label="Main">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="../mission/">Mission</a></li>
+          <li class="nav-links__group">
+            <a href="../#research">Research</a><button type="button" class="nav-sub-toggle" aria-expanded="false" aria-controls="nav-sub-research" aria-label="More research pages"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <ul class="nav-sub" id="nav-sub-research">
+              <li><a href="../#research">Publications</a></li>
+              <li><a href="./" aria-current="page">Agentic Governance Workflow</a></li>
+            </ul>
+          </li>
+          <li><a href="../#who-we-are">Who we are</a></li>
+          <li class="nav-links__cta-item"><a class="nav-links__cta" href="../#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-title frame">
+    <div class="container">
+      <h1>Agentic Governance Workflow</h1>
+      <p class="page-title__sub">How to make governance scale</p>
+    </div>
+  </section>
+
+  <div class="container article-layout">
+    <aside class="toc" aria-label="On this page">
+      <p class="toc__label">On this page</p>
+      <ol class="toc__list">
+        <li><a href="#problem">The problem</a></li>
+        <li><a href="#gdd">Governance-Driven Development</a></li>
+        <li><a href="#workflow">Agentic Governance Workflow</a></li>
+        <li><a href="#papers">Papers</a></li>
+      </ol>
+    </aside>
+
+    <article class="article">
+
+      <section class="article__section" id="problem" aria-labelledby="problem-title">
+        <h2 id="problem-title">The problem</h2>
+        <p class="article__lead"><span class="marker">We argue that most compliance budget goes into documentation for audits, not into changes to the AI system.</span></p>
+        <div class="split">
+          <div class="split__text">
+            <p>The EU AI Act is a management-based regulation. It mandates processes, such as risk management, documentation and monitoring, and leaves the outcomes underspecified. Governance quality is a <span class="term"><button type="button" class="term__word" aria-describedby="tip-cg">credence good</button><span class="term__tip" role="tooltip" id="tip-cg">A good whose quality the buyer cannot assess through use or inspection.</span></span>: auditors and authorities cannot check by inspection whether governance makes a system safer.</p>
+            <p>Documentation is easy to inspect. Changes to the AI system are not. So the budget flows toward documentation, and compliance risks becoming symbolic: it satisfies an audit without making a system safer.</p>
+            <p>AI coding agents add pressure. Features that took weeks now take days. Governance work is still mostly manual: people read the regulation, interpret it, draft policy and produce evidence by hand. As development speeds up, governance becomes the constraint.</p>
+            <p>We want to redirect the budget toward implementation, and make the work itself cheaper.</p>
+          </div>
+          <figure class="figure split__figure budget">
+            <figcaption class="figure__title" id="budget-title">Where the compliance budget goes</figcaption>
+            <div class="budget__track" id="budget-track">
+              <div class="budget__bar">
+                <div class="budget__docs"></div>
+                <div class="budget__impl"></div>
+              </div>
+              <div class="budget__thumb-rail">
+                <div class="budget__thumb" id="budget-thumb" role="slider" tabindex="0" aria-labelledby="budget-title" aria-describedby="budget-note" aria-valuemin="30" aria-valuemax="70" aria-valuenow="62" aria-valuetext="62% documentation for audits, 38% implementation">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3 L6 12 L16 21 Z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3 L18 12 L8 21 Z"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="budget__labels">
+              <div>
+                <p class="budget__name">Documentation for audits</p>
+                <p class="budget__desc">Proves that governance happened. Easy to inspect.</p>
+              </div>
+              <div></div>
+              <div>
+                <p class="budget__name budget__name--impl">Implementation</p>
+                <p class="budget__desc">Changes what gets built. Hard to inspect.</p>
+              </div>
+            </div>
+            <p class="budget__caveat" id="budget-note">Illustrative only</p>
+          </figure>
+        </div>
+      </section>
+
+      <section class="article__section" id="gdd" aria-labelledby="gdd-title">
+        <h2 id="gdd-title">Governance-Driven Development</h2>
+        <p class="article__lead"><span class="marker">Governance-Driven Development treats regulatory obligations as specifications for software development work.</span></p>
+        <p>In specification-driven development, a developer describes a code change in a specification that an AI coding agent then implements. Governance-Driven Development applies the same logic to regulation. An obligation is translated into a specification that a coding agent can implement and a human can verify.</p>
+        <p>Every obligation is traced to a change in the AI system, from the regulation through a policy and a control, with the evidence documented along the way.</p>
+
+        <p>Evidence-based compliance rewards implementation over documentation. Because each change is linked to its obligation, it gives auditors a verifiable outcome to check, and makes continuous, automated checks possible.</p>
+        <p>We propose the method in our <a class="inline-link" href="https://proceedings.mlr.press/v350/jarvers26a.html" target="_blank" rel="noopener">ECAF '26 paper</a>, together with an early proof of concept at one AI company.</p>
+
+        <h3>How it works</h3>
+        <p>Each obligation passes through five steps across three domains. Agents plan, implement and document. A human verifies at both handovers.</p>
+
+        <figure class="figure gdd">
+          <div class="gdd__head">
+            <figcaption class="figure__title">Governance-Driven Development cycle</figcaption>
+            <ul class="gdd__legend" aria-label="Actors">
+              <li class="gdd__actor gdd__actor--gov"><svg aria-hidden="true"><use href="#icon-governance-agent"/></svg>Governance agent</li>
+              <li class="gdd__actor"><svg aria-hidden="true"><use href="#icon-human"/></svg>Human</li>
+              <li class="gdd__actor gdd__actor--code"><svg aria-hidden="true"><use href="#icon-coding-agent"/></svg>Coding agent</li>
+            </ul>
+          </div>
+
+          <div class="gdd__body">
+            <div class="gdd__chain">
+              <p class="gdd__chain-label">Compliance chain</p>
+              <ol class="gdd__chain-list">
+                <li><span class="node"><svg aria-hidden="true"><use href="#icon-paragraph"/></svg></span><span><b>Obligation</b>What the regulation requires</span></li>
+                <li><span class="node"><svg aria-hidden="true"><use href="#icon-document"/></svg></span><span><b>Policy</b>What it means for the organisation</span></li>
+                <li><span class="node"><svg aria-hidden="true"><use href="#icon-shield"/></svg></span><span><b>Control</b>How to implement the requirements</span></li>
+                <li><span class="node"><svg aria-hidden="true"><use href="#icon-search"/></svg></span><span><b>Evidence</b>Proof it was implemented</span></li>
+              </ol>
+            </div>
+
+            <ol class="gdd__steps">
+              <li class="gdd__domain-bg gdd__domain-bg--gov" aria-hidden="true"></li>
+              <li class="gdd__domain-bg gdd__domain-bg--human" aria-hidden="true"></li>
+              <li class="gdd__domain-bg gdd__domain-bg--product" aria-hidden="true"></li>
+              <li class="gdd__domain-label gdd__domain-label--gov" aria-hidden="true">Governance domain</li>
+              <li class="gdd__domain-label gdd__domain-label--human" aria-hidden="true">Human verification</li>
+              <li class="gdd__domain-label gdd__domain-label--product" aria-hidden="true">Product domain</li>
+
+              <li class="step step--gov step--1">
+                <span class="step__num">1</span><svg class="step__actor" aria-hidden="true"><use href="#icon-governance-agent"/></svg>
+                <span class="step__domain">Governance domain · Governance agent</span>
+                <b class="step__title">Plans the specification</b>
+                <span class="step__text">Turns the obligation into a scoped, testable task with acceptance criteria</span>
+              </li>
+              <li class="step step--human step--2">
+                <span class="step__num">2</span><svg class="step__actor" aria-hidden="true"><use href="#icon-human-spec"/></svg>
+                <span class="step__domain">Human verification · Human</span>
+                <b class="step__title">Verifies the specification</b>
+                <span class="step__text">Scope, task description, obligation reference and acceptance criteria</span>
+              </li>
+              <li class="step step--product step--3">
+                <span class="step__num">3</span><svg class="step__actor" aria-hidden="true"><use href="#icon-coding-agent"/></svg>
+                <span class="step__domain">Product domain · Coding agent</span>
+                <b class="step__title">Implements the change</b>
+                <span class="step__text">Works inside the accepted scope, implements the change, and opens a pull request</span>
+                <span class="step__note">The obligation reaches the codebase</span>
+              </li>
+              <li class="step step--human step--4">
+                <span class="step__num">4</span><svg class="step__actor" aria-hidden="true"><use href="#icon-human-code"/></svg>
+                <span class="step__domain">Human verification · Human</span>
+                <b class="step__title">Verifies the change</b>
+                <span class="step__text">Confirms acceptance criteria are satisfied, then merges the code</span>
+              </li>
+              <li class="step step--gov step--5">
+                <span class="step__num">5</span><svg class="step__actor" aria-hidden="true"><use href="#icon-governance-agent"/></svg>
+                <span class="step__domain">Governance domain · Governance agent</span>
+                <b class="step__title">Documents the evidence</b>
+                <span class="step__text">Records the merged change as evidence against the control</span>
+              </li>
+            </ol>
+          </div>
+        </figure>
+
+      </section>
+
+      <section class="article__section" id="workflow" aria-labelledby="workflow-title">
+        <h2 id="workflow-title">Agentic Governance Workflow</h2>
+        <p class="article__lead"><span class="marker">Agent skills that let AI agents do the repeatable parts of governance work, while people make the decisions.</span></p>
+        <div class="split">
+          <div class="split__text">
+            <p>Governance does not bottleneck on judgment. It bottlenecks on the knowledge work around judgment: reading standards, extracting requirements, mapping cross-references and keeping documentation current as regulations change. The workflow targets that work. People keep the authority.</p>
+            <p>It separates two layers. The compliance layer holds the regulation, approved policies, applied controls and the evidence record. Only people change it. The workspace is where agents work. They use skills to decompose requirements, plan specifications, document evidence and check consistency, and every skill is started by a person.</p>
+            <p>The workflow builds on our <a class="inline-link" href="../papers/2027-hicss-human-ai-collaboration-in-compliance-automation.pdf" target="_blank" rel="noopener">HICSS '27 study</a> of an agentic knowledge base for AI governance. At an AI startup, we applied it to two ISO management system standards and derived two design principles: human authority over agent moderation, and traceability.</p>
+            <p>The workflow does not automate compliance. It is an agentic harness for governance work that values changes to the AI system over paperwork. We will release the skills and the workflow as open source.</p>
+          </div>
+          <figure class="split__figure layers" aria-labelledby="layers-title">
+            <div class="layers__compliance">
+              <div class="layers__head">
+                <p class="layers__name" id="layers-title">Compliance</p>
+                <p class="layers__badge"><svg aria-hidden="true"><use href="#icon-human"/></svg>Human-authoritative</p>
+              </div>
+              <p class="layers__caption">The organisation's compliance corpus</p>
+              <ol class="layers__corpus">
+                <li><span class="node"><svg aria-hidden="true"><use href="#icon-paragraph"/></svg></span>Regulation &amp; Standards</li>
+                <li><span class="node"><svg aria-hidden="true"><use href="#icon-document"/></svg></span>Approved Policies</li>
+                <li><span class="node"><svg aria-hidden="true"><use href="#icon-shield"/></svg></span>Applied Controls</li>
+                <li><span class="node"><svg aria-hidden="true"><use href="#icon-search"/></svg></span>Evidence Record</li>
+              </ol>
+            </div>
+            <div class="layers__boundary">
+              <p class="layers__boundary-title">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path style="fill:var(--ink)" d="M12 21 L6 13 H10 V3 H14 V13 H18 Z"/></svg>
+                Human-agent collaboration
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path style="fill:var(--blue)" d="M12 3 L18 11 H14 V21 H10 V11 H6 Z"/></svg>
+              </p>
+              <p class="layers__boundary-text">The agent performs repetitive and template-driven work.<br>The human steers, provides feedback, and retains accountability.</p>
+            </div>
+            <div class="layers__workspace">
+              <div class="layers__head">
+                <p class="layers__name layers__name--blue">Workspace</p>
+                <p class="layers__badge layers__badge--blue"><svg aria-hidden="true"><use href="#icon-governance-agent"/></svg>Agent-moderated</p>
+              </div>
+              <p class="layers__caption">The agent's internal operating system. All skills are human-invoked.</p>
+              <ul class="layers__skills">
+                <li><span>/</span>decompose-requirement</li>
+                <li><span>/</span>plan-specification</li>
+                <li><span>/</span>review-product</li>
+                <li><span>/</span>document-evidence</li>
+                <li><span>/</span>check-consistency</li>
+                <li><span>/</span>answer-question</li>
+              </ul>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="article__section article__section--last" id="papers" aria-labelledby="papers-title">
+        <h2 id="papers-title">Papers</h2>
+        <ul class="paper-list">
+          <li>
+            <a class="paper-row" href="https://proceedings.mlr.press/v350/jarvers26a.html" target="_blank" rel="noopener">
+              <span class="paper-tag">ECAF '26</span>
+              <span class="paper-row__body">
+                <span class="paper-row__title">Governance-Driven Development: Embedding Regulatory Requirements in AI Development Workflows</span>
+                <span class="paper-row__cite">Jarvers &amp; Papakyriakopoulos (2026). European Conference on Algorithmic Fairness, Ghent. PMLR 350:365–371.</span>
+              </span>
+              <span class="paper-row__pdf">PDF ↗</span>
+            </a>
+          </li>
+          <li>
+            <a class="paper-row paper-row--violet" href="../papers/2027-hicss-human-ai-collaboration-in-compliance-automation.pdf" target="_blank" rel="noopener">
+              <span class="paper-tag paper-tag--violet">HICSS '27</span>
+              <span class="paper-row__body">
+                <span class="paper-row__title">Human-AI Collaboration in Compliance Automation: Designing an Agentic Knowledge Base for AI Governance</span>
+                <span class="paper-row__cite">Jarvers, Röthemeier, Wittges &amp; Papakyriakopoulos (2027). Hawaii International Conference on System Sciences. Forthcoming.</span>
+              </span>
+              <span class="paper-row__pdf">PDF ↗</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer-wrap frame">
+  <div class="site-footer">
+    <div class="site-footer__brand">
+      <svg class="site-footer__logo" viewBox="0 10 200 200" aria-hidden="true"><circle cx="100" cy="110" r="85" stroke-width="14"/><circle cx="100" cy="138.76" r="52.53" stroke-width="12"/><circle cx="100" cy="155.12" r="32.47" stroke-width="11"/></svg>
+      <span class="site-footer__name">Scalable Governance</span>
+      <span class="site-footer__line">An applied research initiative based at the TUM Professorship of Societal Computing</span>
+    </div>
+    <p class="site-footer__copy">© 2026 · <a href="../imprint/">Imprint</a> · <a href="../privacy/">Privacy</a></p>
+  </div>
+</footer>
+</body>
+</html>

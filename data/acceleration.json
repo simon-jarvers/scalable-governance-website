@@ -1,0 +1,645 @@
+{
+  "_meta": {
+    "description": "Data behind the acceleration chart in the Scalable Governance hero. Every number shown on the page resolves to an entry here. See data/VERIFICATION.md.",
+    "built": "2026-10-16",
+    "order": [
+      "capability",
+      "compute",
+      "cost",
+      "adoption",
+      "incidents"
+    ],
+    "window": [
+      "2021-01-01",
+      "2027-01-01"
+    ],
+    "data_as_of": "2026-10-16",
+    "display": "All five lines share one time axis, 1 Jan 2021 to 1 Jan 2027. The y-axis shows the selected measure in its own units (ticks per measure); the other four are drawn in grey on their own scales, for timing only."
+  },
+  "capability": {
+    "label": "Capability",
+    "measure": "Length of software tasks (in human expert time) that frontier AI agents complete with 50% success",
+    "format": "minutes",
+    "axis_label": "Task length (human expert time)",
+    "ticks": [
+      0,
+      180,
+      360,
+      540,
+      720
+    ],
+    "headline": {
+      "text": "Doubling every ~4 months",
+      "value": 128.7,
+      "unit": "days (doubling time)",
+      "basis": "METR doubling time for frontier models released from 2023 on: 129 days (≈4.2 months), range 104–158 days. METR excludes points with central estimate above 16 hours from this fit."
+    },
+    "caption": "Since 2023, the length of software tasks that frontier AI agents complete with 50% success has doubled about every four months (range 3.4–5.2 months). Points are the frontier models METR measured; estimates above 16 hours are left out because METR flags them as unreliable.",
+    "source": {
+      "title": "METR, Task-Completion Time Horizons of Frontier AI Models (Time Horizon 1.1), benchmark_results_1_1.yaml",
+      "url": "https://metr.org/time-horizons/",
+      "data_url": "https://metr.org/assets/benchmark_results_1_1.yaml",
+      "publisher_updated": "2026-09-08",
+      "licence": "© METR, all rights reserved. Numbers cited; chart drawn by Scalable Governance.",
+      "accessed": "2026-10-16",
+      "status": "primary",
+      "short": "METR, Time Horizon 1.1",
+      "note": "Estimates above 16 hours are left out, as METR flags them as unreliable."
+    },
+    "points": [
+      {
+        "date": "2022-03-15",
+        "value": 0.6,
+        "unit": "minutes",
+        "label": "GPT-3.5 Turbo Instruct",
+        "ci_low": 0.26,
+        "ci_high": 1.12,
+        "source_id": "gpt_3_5_turbo_instruct",
+        "note": ""
+      },
+      {
+        "date": "2023-03-14",
+        "value": 3.99,
+        "unit": "minutes",
+        "label": "GPT-4",
+        "ci_low": 1.93,
+        "ci_high": 8.0,
+        "source_id": "gpt_4",
+        "note": ""
+      },
+      {
+        "date": "2023-11-06",
+        "value": 4.04,
+        "unit": "minutes",
+        "label": "GPT-4 Turbo (Nov 2023)",
+        "ci_low": 1.87,
+        "ci_high": 8.44,
+        "source_id": "gpt_4_1106_inspect",
+        "note": ""
+      },
+      {
+        "date": "2024-05-13",
+        "value": 6.99,
+        "unit": "minutes",
+        "label": "GPT-4o",
+        "ci_low": 4.0,
+        "ci_high": 12.91,
+        "source_id": "gpt_4o_inspect",
+        "note": ""
+      },
+      {
+        "date": "2024-06-20",
+        "value": 11.4,
+        "unit": "minutes",
+        "label": "Claude 3.5 Sonnet (Jun 2024)",
+        "ci_low": 5.49,
+        "ci_high": 22.38,
+        "source_id": "claude_3_5_sonnet_20240620_inspect",
+        "note": ""
+      },
+      {
+        "date": "2024-09-12",
+        "value": 20.33,
+        "unit": "minutes",
+        "label": "o1-preview",
+        "ci_low": 11.72,
+        "ci_high": 33.38,
+        "source_id": "o1_preview",
+        "note": ""
+      },
+      {
+        "date": "2024-10-22",
+        "value": 20.52,
+        "unit": "minutes",
+        "label": "Claude 3.5 Sonnet (Oct 2024)",
+        "ci_low": 10.14,
+        "ci_high": 40.82,
+        "source_id": "claude_3_5_sonnet_20241022_inspect",
+        "note": ""
+      },
+      {
+        "date": "2024-12-05",
+        "value": 38.83,
+        "unit": "minutes",
+        "label": "o1",
+        "ci_low": 21.16,
+        "ci_high": 64.95,
+        "source_id": "o1_inspect",
+        "note": ""
+      },
+      {
+        "date": "2025-02-24",
+        "value": 60.39,
+        "unit": "minutes",
+        "label": "Claude 3.7 Sonnet",
+        "ci_low": 33.01,
+        "ci_high": 104.23,
+        "source_id": "claude_3_7_sonnet_inspect",
+        "note": ""
+      },
+      {
+        "date": "2025-04-16",
+        "value": 119.73,
+        "unit": "minutes",
+        "label": "o3",
+        "ci_low": 74.62,
+        "ci_high": 190.94,
+        "source_id": "o3_inspect",
+        "note": ""
+      },
+      {
+        "date": "2025-08-07",
+        "value": 203.01,
+        "unit": "minutes",
+        "label": "GPT-5",
+        "ci_low": 112.64,
+        "ci_high": 405.55,
+        "source_id": "gpt_5_2025_08_07_inspect",
+        "note": ""
+      },
+      {
+        "date": "2025-11-18",
+        "value": 224.33,
+        "unit": "minutes",
+        "label": "Gemini 3 Pro",
+        "ci_low": 139.57,
+        "ci_high": 379.24,
+        "source_id": "gemini_3_pro",
+        "note": ""
+      },
+      {
+        "date": "2025-11-24",
+        "value": 292.99,
+        "unit": "minutes",
+        "label": "Claude Opus 4.5",
+        "ci_low": 161.72,
+        "ci_high": 623.7,
+        "source_id": "claude_opus_4_5_inspect",
+        "note": ""
+      },
+      {
+        "date": "2025-12-11",
+        "value": 352.25,
+        "unit": "minutes",
+        "label": "GPT-5.2",
+        "ci_low": 198.07,
+        "ci_high": 815.18,
+        "source_id": "gpt_5_2",
+        "note": ""
+      },
+      {
+        "date": "2026-02-05",
+        "value": 718.81,
+        "unit": "minutes",
+        "label": "Claude Opus 4.6",
+        "ci_low": 316.69,
+        "ci_high": 3633.79,
+        "source_id": "claude_opus_4_6_inspect",
+        "note": "Wide confidence interval; upper bound above 16 hours."
+      }
+    ],
+    "excluded": [
+      {
+        "date": "2026-04-07",
+        "value": 1044.78,
+        "unit": "minutes",
+        "label": "Claude Mythos Preview (early)",
+        "ci_low": 508.88,
+        "ci_high": 3304.26,
+        "source_id": "claude_mythos_preview_early_inspect",
+        "note": "Excluded: METR states that measurements above 16 hrs are unreliable with the current task suite."
+      }
+    ]
+  },
+  "compute": {
+    "label": "Compute",
+    "measure": "Computing power of AI chips sold since 2022, all major designers combined (million H100-equivalents, cumulative)",
+    "format": "millions",
+    "axis_label": "AI chip capacity (million H100-equivalents)",
+    "ticks": [
+      0,
+      10,
+      20,
+      30,
+      40
+    ],
+    "headline": {
+      "text": "3.4× more AI computing power each year",
+      "value": 3.4,
+      "unit": "× per year",
+      "basis": "Epoch AI Trends: the computing power of the total stock of AI chips has grown 3.4× per year since 2022 (90% CI 3.2× to 3.7×; doubling every 6.8 months)."
+    },
+    "caption": "The AI chips sold since 2022 add up to about 31.6 million H100-equivalents by mid-2026, and this stock has grown about 3.4× per year. The figure combines Nvidia, Google, Amazon, AMD, Huawei and Cambricon; chips that have been retired are not subtracted.",
+    "source": {
+      "title": "Epoch AI, Data on AI chip sales (timelines by chip)",
+      "url": "https://epoch.ai/data/ai-chip-sales",
+      "data_url": "https://epoch.ai/data/ai_chip_sales_timelines_by_chip.csv",
+      "publisher_updated": "2026-10-14",
+      "licence": "CC BY 4.0. Cumulative totals are our sum of Epoch's quarterly median estimates across chips, as in Epoch's own cumulative view.",
+      "accessed": "2026-10-16",
+      "status": "primary",
+      "short": "Epoch AI, Data on AI chip sales",
+      "note": "Cumulative totals are our sum of Epoch's quarterly median estimates across chips; retired chips are not subtracted."
+    },
+    "secondary_stat": {
+      "text": "3.4× per year since 2022",
+      "value": 3.4,
+      "unit": "× per year (compute stock)",
+      "basis": "Epoch AI Trends: compute stock growth 3.4×/year, 90% CI 3.2× to 3.7×, since 2022.",
+      "source": {
+        "title": "Epoch AI, Trends in Artificial Intelligence",
+        "url": "https://epoch.ai/trends",
+        "licence": "CC BY 4.0",
+        "accessed": "2026-10-16"
+      }
+    },
+    "points": [
+      {
+        "date": "2022-03-31",
+        "value": 0.067,
+        "unit": "million H100e (cumulative)",
+        "label": "Q1 2022",
+        "note": "Coverage starts Q1 2022; chips sold earlier are not counted."
+      },
+      {
+        "date": "2022-06-30",
+        "value": 0.138,
+        "unit": "million H100e (cumulative)",
+        "label": "Q2 2022",
+        "note": ""
+      },
+      {
+        "date": "2022-09-30",
+        "value": 0.212,
+        "unit": "million H100e (cumulative)",
+        "label": "Q3 2022",
+        "note": ""
+      },
+      {
+        "date": "2022-12-31",
+        "value": 0.303,
+        "unit": "million H100e (cumulative)",
+        "label": "Q4 2022",
+        "note": "Google TPU figures for Q4 2022 are partial (Epoch flags them incomplete)."
+      },
+      {
+        "date": "2023-03-31",
+        "value": 0.42,
+        "unit": "million H100e (cumulative)",
+        "label": "Q1 2023",
+        "note": ""
+      },
+      {
+        "date": "2023-06-30",
+        "value": 0.665,
+        "unit": "million H100e (cumulative)",
+        "label": "Q2 2023",
+        "note": ""
+      },
+      {
+        "date": "2023-09-30",
+        "value": 1.059,
+        "unit": "million H100e (cumulative)",
+        "label": "Q3 2023",
+        "note": ""
+      },
+      {
+        "date": "2023-12-31",
+        "value": 1.594,
+        "unit": "million H100e (cumulative)",
+        "label": "Q4 2023",
+        "note": ""
+      },
+      {
+        "date": "2024-03-31",
+        "value": 2.422,
+        "unit": "million H100e (cumulative)",
+        "label": "Q1 2024",
+        "note": ""
+      },
+      {
+        "date": "2024-06-30",
+        "value": 3.455,
+        "unit": "million H100e (cumulative)",
+        "label": "Q2 2024",
+        "note": ""
+      },
+      {
+        "date": "2024-09-30",
+        "value": 4.763,
+        "unit": "million H100e (cumulative)",
+        "label": "Q3 2024",
+        "note": ""
+      },
+      {
+        "date": "2024-12-31",
+        "value": 6.687,
+        "unit": "million H100e (cumulative)",
+        "label": "Q4 2024",
+        "note": ""
+      },
+      {
+        "date": "2025-03-31",
+        "value": 9.259,
+        "unit": "million H100e (cumulative)",
+        "label": "Q1 2025",
+        "note": ""
+      },
+      {
+        "date": "2025-06-30",
+        "value": 12.187,
+        "unit": "million H100e (cumulative)",
+        "label": "Q2 2025",
+        "note": ""
+      },
+      {
+        "date": "2025-09-30",
+        "value": 15.89,
+        "unit": "million H100e (cumulative)",
+        "label": "Q3 2025",
+        "note": ""
+      },
+      {
+        "date": "2025-12-31",
+        "value": 20.301,
+        "unit": "million H100e (cumulative)",
+        "label": "Q4 2025",
+        "note": ""
+      },
+      {
+        "date": "2026-03-31",
+        "value": 25.281,
+        "unit": "million H100e (cumulative)",
+        "label": "Q1 2026",
+        "note": ""
+      },
+      {
+        "date": "2026-06-30",
+        "value": 31.609,
+        "unit": "million H100e (cumulative)",
+        "label": "Q2 2026",
+        "note": ""
+      }
+    ]
+  },
+  "cost": {
+    "label": "Cost",
+    "measure": "How many times cheaper it is to score 75% on PhD-level science questions (GPQA Diamond) than in January 2025, using the cheapest model available; Epoch's first cost per question divided by each later one",
+    "format": "times",
+    "axis_label": "Times cheaper than Jan 2025 (score of 75% on PhD-level questions)",
+    "ticks": [
+      0,
+      200,
+      400,
+      600,
+      800
+    ],
+    "headline": {
+      "text": "725× cheaper in 18 months",
+      "value": 725.5,
+      "unit": "× (cost ratio)",
+      "basis": "Epoch AI's lowest cost per question to score 75% on GPQA Diamond: $0.2989 (31 Jan 2025) divided by $0.000412 (9 Jul 2026)."
+    },
+    "caption": "GPQA Diamond is a multiple-choice exam of PhD-level science questions. With the cheapest available model, a score of 75% (counted up from the 25% guessing rate) cost 30 cents per question in January 2025 and 0.04 cents in July 2026. Across five benchmarks, Epoch AI finds costs falling about 13× per year since 2023.",
+    "source": {
+      "title": "Epoch AI, The plunging price of thought (Emberson & Roodman, 22 Sep 2026)",
+      "url": "https://epoch.ai/publications/the-plunging-price-of-thought",
+      "data_url": "https://github.com/droodman/inference-cost/blob/main/output/slides/Figure%202.csv",
+      "data_commit": "9163c17ee7217b9f09ac51bcc71ed64c18c04bc8",
+      "licence": "CC BY 4.0 (Epoch AI publication). Modified: shown as times cheaper than the first point (Epoch's first cost per question divided by each later one). The linked code/data repository carries no licence file.",
+      "accessed": "2026-10-16",
+      "status": "primary",
+      "short": "Epoch AI, The plunging price of thought (2026)",
+      "note": "Shown as times cheaper than the first point: Epoch's first cost per question divided by each later one."
+    },
+    "points": [
+      {
+        "date": "2025-01-31",
+        "value": 1.0,
+        "unit": "× cheaper than 31 Jan 2025",
+        "label": "o3 (high)",
+        "cost_usd_per_question": 0.298906,
+        "accuracy": 0.7576,
+        "note": "Epoch's report text names this model o3 and dates it 31 Jan 2025 (the o3-mini release date); kept as published."
+      },
+      {
+        "date": "2025-03-25",
+        "value": 3.35,
+        "unit": "× cheaper than 31 Jan 2025",
+        "label": "Gemini 2.5 Pro (Jun 2025)",
+        "cost_usd_per_question": 0.089116,
+        "accuracy": 0.8036,
+        "note": ""
+      },
+      {
+        "date": "2025-06-05",
+        "value": 23.11,
+        "unit": "× cheaper than 31 Jan 2025",
+        "label": "Gemini 2.5 Pro (Jun 2025)",
+        "cost_usd_per_question": 0.012932,
+        "accuracy": 0.7777,
+        "note": ""
+      },
+      {
+        "date": "2025-12-01",
+        "value": 33.89,
+        "unit": "× cheaper than 31 Jan 2025",
+        "label": "DeepSeek-V3.2",
+        "cost_usd_per_question": 0.008821,
+        "accuracy": 0.7772,
+        "note": ""
+      },
+      {
+        "date": "2026-02-13",
+        "value": 42.09,
+        "unit": "× cheaper than 31 Jan 2025",
+        "label": "Qwen3.5 397B-A17B",
+        "cost_usd_per_question": 0.007102,
+        "accuracy": 0.798,
+        "note": ""
+      },
+      {
+        "date": "2026-02-25",
+        "value": 137.08,
+        "unit": "× cheaper than 31 Jan 2025",
+        "label": "Qwen 3.5 Flash (hosted 35B-A3B)",
+        "cost_usd_per_question": 0.0021805,
+        "accuracy": 0.7624,
+        "note": ""
+      },
+      {
+        "date": "2026-06-01",
+        "value": 246.42,
+        "unit": "× cheaper than 31 Jan 2025",
+        "label": "MiniMax-M3",
+        "cost_usd_per_question": 0.001213,
+        "accuracy": 0.7508,
+        "note": ""
+      },
+      {
+        "date": "2026-07-09",
+        "value": 725.5,
+        "unit": "× cheaper than 31 Jan 2025",
+        "label": "GPT-5.6 Luna (low)",
+        "cost_usd_per_question": 0.000412,
+        "accuracy": 0.7525,
+        "note": ""
+      }
+    ]
+  },
+  "adoption": {
+    "label": "Adoption",
+    "measure": "EU enterprises (10+ employees) using at least one AI technology (%)",
+    "format": "percent",
+    "axis_label": "EU enterprises using AI (10+ employees)",
+    "ticks": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25
+    ],
+    "headline": {
+      "text": "7.7% → 20.0%",
+      "value": 19.95,
+      "unit": "% of enterprises",
+      "basis": "Eurostat isoc_eb_ai, E_AI_TANY, EU27_2020, 10+ persons employed, 2021 and 2025."
+    },
+    "caption": "The share of EU enterprises with 10 or more employees using AI rose from 7.7% in 2021 to 20.0% in 2025. Larger firms use it more: in 2025, 17.0% of small, 30.4% of medium and 55.0% of large enterprises. No EU AI figures for 2022; the 2025 list of AI technologies adds image, video and audio generation.",
+    "source": {
+      "title": "Eurostat, Artificial intelligence by size class of enterprise (isoc_eb_ai)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_ai/default/table",
+      "data_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_eb_ai?format=JSON&lang=EN&geo=EU27_2020",
+      "doi": "10.2908/ISOC_EB_AI",
+      "publisher_updated": "2026-06-15",
+      "licence": "© European Union, reuse authorised with acknowledgement of the source (Commission Decision 2011/833/EU). Values rounded to one decimal in display.",
+      "accessed": "2026-10-16",
+      "status": "primary",
+      "short": "Eurostat, isoc_eb_ai",
+      "note": "Values rounded to one decimal."
+    },
+    "points": [
+      {
+        "date": "2021",
+        "value": 7.65,
+        "unit": "% of enterprises",
+        "label": "EU, 2021",
+        "note": ""
+      },
+      {
+        "date": "2023",
+        "value": 8.06,
+        "unit": "% of enterprises",
+        "label": "EU, 2023",
+        "note": ""
+      },
+      {
+        "date": "2024",
+        "value": 13.48,
+        "unit": "% of enterprises",
+        "label": "EU, 2024",
+        "note": ""
+      },
+      {
+        "date": "2025",
+        "value": 19.95,
+        "unit": "% of enterprises",
+        "label": "EU, 2025",
+        "note": "2025 list of AI technologies adds 'generating pictures, videos, sound/audio'."
+      }
+    ],
+    "breakdown": [
+      {
+        "date": "2025",
+        "size_class": "10-49",
+        "label": "Small (10–49)",
+        "value": 17.0,
+        "unit": "% of enterprises"
+      },
+      {
+        "date": "2025",
+        "size_class": "50-249",
+        "label": "Medium (50–249)",
+        "value": 30.36,
+        "unit": "% of enterprises"
+      },
+      {
+        "date": "2025",
+        "size_class": "GE250",
+        "label": "Large (250+)",
+        "value": 55.03,
+        "unit": "% of enterprises"
+      }
+    ]
+  },
+  "incidents": {
+    "label": "Incidents",
+    "measure": "AI incidents recorded in the AI Incident Database, by incident year",
+    "format": "count",
+    "axis_label": "Reported AI incidents per year",
+    "ticks": [
+      0,
+      100,
+      200,
+      300,
+      400,
+      500
+    ],
+    "headline": {
+      "text": "457 reported incidents in 2025",
+      "value": 457,
+      "unit": "reported incidents",
+      "basis": "Count of incidents.csv rows with a 2025 incident date in AIID snapshot backup-20261012101643 (12 Oct 2026)."
+    },
+    "caption": "AI incidents with a 2025 incident date recorded in the AI Incident Database rose to 457, from 309 in 2024. These are reported incidents: counts reflect media attention and curation as well as occurrence, and past years are revised as incidents are added (snapshot of 12 Oct 2026).",
+    "source": {
+      "title": "AI Incident Database, weekly snapshot backup-20261012101643 (incidents.csv)",
+      "url": "https://incidentdatabase.ai/research/snapshots/",
+      "data_url": "https://pub-72b2b2fc36ec423189843747af98f80e.r2.dev/backup-20261012101643.tar.bz2",
+      "snapshot_date": "2026-10-12",
+      "licence": "CC BY-SA 4.0. Chart redrawn from AIID data and shared under CC BY-SA 4.0.",
+      "accessed": "2026-10-16",
+      "status": "primary",
+      "short": "AI Incident Database, snapshot of 12 Oct 2026",
+      "note": "Counted by incident date; 2026 is a partial year and not drawn."
+    },
+    "points": [
+      {
+        "date": "2021",
+        "value": 80,
+        "unit": "reported incidents",
+        "label": "2021",
+        "note": ""
+      },
+      {
+        "date": "2022",
+        "value": 109,
+        "unit": "reported incidents",
+        "label": "2022",
+        "note": ""
+      },
+      {
+        "date": "2023",
+        "value": 179,
+        "unit": "reported incidents",
+        "label": "2023",
+        "note": ""
+      },
+      {
+        "date": "2024",
+        "value": 309,
+        "unit": "reported incidents",
+        "label": "2024",
+        "note": ""
+      },
+      {
+        "date": "2025",
+        "value": 457,
+        "unit": "reported incidents",
+        "label": "2025",
+        "note": ""
+      }
+    ]
+  }
+}

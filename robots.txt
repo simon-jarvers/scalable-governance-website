@@ -1,0 +1,6 @@
+# Every crawler is welcome, including search engines and AI assistants
+# (GPTBot, ClaudeBot, PerplexityBot, Google-Extended and others).
+User-agent: *
+Allow: /
+
+Sitemap: https://scalable-governance.org/sitemap.xml

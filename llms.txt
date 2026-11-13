@@ -1,0 +1,28 @@
+# Scalable Governance
+
+> Scalable Governance is an applied research initiative with the goal of scaling AI governance to the pace of rapidly increasing capability and volume of AI systems, without losing the human judgment and accountability that good governance requires. We are based at the TUM Professorship of Societal Computing.
+
+We study AI governance inside the organisations that build AI systems, and among the consultants, auditors and standard-setters who interpret the rules for them. Our most recent work focuses on making governance scale: methods and agentic tools that embed regulatory requirements in AI development workflows. Most of our evidence so far comes from a single organisation.
+
+## Pages
+
+- [Home](https://scalable-governance.org/): the argument, the publications and the team
+- [Mission statement](https://scalable-governance.org/mission/): why AI governance has to scale, what we build first, how we work, FAQ, and how to support the work
+- [Agentic Governance Workflow](https://scalable-governance.org/agentic-governance-workflow/): Governance-Driven Development and the agent-skill workflow
+
+## Publications
+
+- [Engaged AI Governance: Addressing the Last Mile Challenge Through Internal Expert Collaboration](https://doi.org/10.1145/3805689.3812341). Jarvers, Papakyriakopoulos. FAccT 2026.
+- [Governing by Proxy: How Regulatory Intermediaries Shape EU AI Act Compliance in Practice](https://doi.org/10.1609/aies.v9i2.43231). Jarvers, Papakyriakopoulos. AIES 2026.
+- [Governance-Driven Development: Embedding Regulatory Requirements in AI Development Workflows](https://proceedings.mlr.press/v350/jarvers26a.html). Jarvers, Papakyriakopoulos. ECAF 2026, PMLR 350.
+- [Human-AI Collaboration in Compliance Automation: Designing an Agentic Knowledge Base for AI Governance](https://scalable-governance.org/papers/2027-hicss-human-ai-collaboration-in-compliance-automation.pdf). Jarvers, Röthemeier, Wittges, Papakyriakopoulos. HICSS 2027, forthcoming (preprint).
+- [Uncertainty as a Primary Barrier for Trustworthy AI Under the EU AI Act: German SME Perspectives](https://proceedings.mlr.press/v294/jarvers25a.html). Jarvers, Ullstein, Grossklags (first two authors contributed equally). EWAF 2025, PMLR 294.
+
+## People
+
+- Simon Jarvers, Initiative Lead: [simon-jarvers.de](https://simon-jarvers.de/), simon.jarvers@tum.de
+- Orestis Papakyriakopoulos, Advisor: Assistant Professor of Societal Computing, TUM
+
+## Optional
+
+- [Acceleration chart data](https://scalable-governance.org/data/acceleration.json) and its [verification log](https://scalable-governance.org/data/VERIFICATION.md)
